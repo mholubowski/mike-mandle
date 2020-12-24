@@ -57,7 +57,7 @@ const isFinite = function(z: number): boolean {
 };
 
 const testAPoint = function(c: number): boolean {
-  console.log("STARTING", "C = ", c);
+  // console.log("STARTING", "C = ", c);
   let z = 0;
   for (var i = 0; i < iterations; i++) {
     //console.log(c, z);
@@ -66,10 +66,10 @@ const testAPoint = function(c: number): boolean {
   //console.log(c, z);
 
   if (isFinite(z)) {
-    console.log(c, "Z IS FINITE. It's in the set");
+    // console.log(c, "Z IS FINITE. It's in the set");
     return true;
   } else {
-    console.log(c, "Z if infinite :(");
+    // console.log(c, "Z if infinite :(");
     return false;
   }
 };
@@ -99,3 +99,5 @@ const testXAxis = function() {
 };
 
 // testXAxis();
+
+console.log("hi");
