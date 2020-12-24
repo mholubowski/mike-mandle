@@ -43,7 +43,7 @@ const drawBGdots = function() {
 ///////////////////////////////////////////////////
 // Math stuff
 //////////////////////////////////////////////////
-const iterations = 100;
+const iterations = 10;
 
 const mandle = function(z: number, c: number): number {
   return add(pow(z, 2), c);
