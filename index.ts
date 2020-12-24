@@ -78,24 +78,24 @@ const testAPoint = function(c: number): boolean {
 
 const testXAxis = function() {
   for (var x = 0; x < pxWidth; x++) {
-    //for (var y = 0; y < pxHeight; y++) {
-    // convert pixel location to C number (0 == -2, 400 == +2)
-    const xFactor = graphWidth / pxWidth;
-    const xGraph = x * xFactor - graphWidth / 2;
+    for (var y = 0; y < pxHeight; y++) {
+      //convert pixel location to C number (0 == -2, 400 == +2)
+      const xFactor = graphWidth / pxWidth;
+      const xGraph = x * xFactor - graphWidth / 2;
 
-    //const yFactor = graphHeight / pxHeight;
-    //const yGraph = y * yFactor - graphHeight / 2;
+      const yFactor = graphHeight / pxHeight;
+      const yGraph = y * yFactor - graphHeight / 2;
 
-    //console.log(i, c);
-    const complexNum = complex(xGraph, 0);
+      //console.log(i, c);
 
-    const isInSet = testAPoint(complexNum);
-    if (isInSet) {
-      dot(x, pxHeight / 2, ctx);
+      const complexNum = complex(xGraph, yGraph);
+
+      const isInSet = testAPoint(complexNum);
+      if (isInSet) {
+        dot(x, y, ctx);
+      }
     }
-    //}
   }
 };
-
 
 testXAxis();
